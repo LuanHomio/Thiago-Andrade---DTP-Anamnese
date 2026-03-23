@@ -11,7 +11,7 @@ export interface FormData {
   hip: string;
   weight: string;
 
-  // Section 3 (Files handled separately or as logic placeholders)
+  // Section 3 (Files handled separately)
   photoFront: File | null;
   photoSide: File | null;
   photoBack: File | null;
@@ -58,3 +58,8 @@ export const INITIAL_DATA: FormData = {
   motivation: '',
   commitment: false,
 };
+
+export interface TrainingFile {
+  name: string;
+  url: string;
+}
