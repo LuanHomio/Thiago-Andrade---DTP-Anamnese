@@ -44,11 +44,11 @@ function App() {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     if (!formData.commitment) {
-      alert("Voce precisa se comprometer com o desafio para continuar.");
+      alert("Voc\u00ea precisa se comprometer com o desafio para continuar.");
       return;
     }
     if (!email) {
-      alert("Link invalido. O email nao foi identificado. Peca um novo link ao Thiago.");
+      alert("Link inv\u00e1lido. O email n\u00e3o foi identificado. Pe\u00e7a um novo link ao Thiago.");
       return;
     }
     if (!formData.sex) {
@@ -110,8 +110,8 @@ function App() {
 
   if (submitted) {
     const nivelLabel = nivel === "iniciante" ? "Iniciante (3x/semana)"
-      : nivel === "intermediario" ? "Intermediario (4x/semana)"
-      : "Avancado (5x+/semana)";
+      : nivel === "intermediario" ? "Intermedi\u00e1rio (4x/semana)"
+      : "Avan\u00e7ado (5x+/semana)";
 
     return (
       <div className="min-h-screen bg-white flex flex-col items-center justify-center p-6 text-center animate-fadeIn">
@@ -124,10 +124,10 @@ function App() {
           Ficha enviada com sucesso!
         </h1>
         <p className="text-lg text-brand-darkGrey mb-2">
-          Seu nivel: <span className="font-bold text-brand-red">{nivelLabel}</span>
+          Seu n{"\u00ed"}vel: <span className="font-bold text-brand-red">{nivelLabel}</span>
         </p>
         <p className="text-brand-darkGrey mb-8">
-          Aqui estao seus treinos personalizados. Baixe todos!
+          Aqui est{"\u00e3"}o seus treinos personalizados. Baixe todos!
         </p>
 
         <div className="w-full max-w-md space-y-3 mb-8">
@@ -157,7 +157,7 @@ function App() {
         </div>
 
         <p className="text-sm text-gray-400">
-          Agora e hora de comecar. Bora!
+          Agora {"\u00e9"} hora de come{"\u00e7"}ar. Bora!
         </p>
       </div>
     );
@@ -168,7 +168,7 @@ function App() {
       <header className="bg-brand-black text-white py-8 px-4 text-center">
         <div className="max-w-2xl mx-auto">
           <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-2 text-white">
-            DESAFIO <span className="text-brand-red">TCHAU PANCA</span>
+            DESAFIO <span className="text-brand-red">TCHAU PAN{"\u00c7"}A</span>
           </h1>
           <p className="text-gray-400 font-medium tracking-wide text-sm md:text-base uppercase">
             Ficha de Anamnese Inicial
@@ -185,10 +185,10 @@ function App() {
         {!email && (
           <div className="bg-yellow-50 border border-yellow-300 rounded-lg p-4 mb-8 text-center">
             <p className="text-yellow-800 font-medium">
-              Link invalido. O email nao foi identificado na URL.
+              Link inv{"\u00e1"}lido. O email n{"\u00e3"}o foi identificado na URL.
             </p>
             <p className="text-yellow-700 text-sm mt-1">
-              Peca um novo link de acesso ao Thiago.
+              Pe{"\u00e7"}a um novo link de acesso ao Thiago.
             </p>
           </div>
         )}
@@ -196,8 +196,8 @@ function App() {
         <form onSubmit={handleSubmit} className="space-y-2">
 
           <Section
-            title="Dados Basicos"
-            description="Esses dados ajudam voce a se reconhecer no processo. Nao e nada clinico."
+            title="Dados B\u00e1sicos"
+            description="Esses dados ajudam voc\u00ea a se reconhecer no processo. N\u00e3o \u00e9 nada cl\u00ednico."
             icon={
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
             }
@@ -246,14 +246,14 @@ function App() {
 
           <Section
             title="Medidas Corporais"
-            description="A fita metrica e mais importante que a balanca. Sempre meca no mesmo ponto, de preferencia na altura do umbigo."
+            description="A fita m\u00e9trica \u00e9 mais importante que a balan\u00e7a. Sempre me\u00e7a no mesmo ponto, de prefer\u00eancia na altura do umbigo."
             icon={
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 6H3"/><path d="M10 12H3"/><path d="M10 18H3"/><circle cx="17" cy="15" r="3"/><path d="m21 19-1.9-1.9"/></svg>
             }
           >
             <Input
               name="waistCircumference"
-              label="Circunferencia da cintura (cm)"
+              label="Circunfer\u00eancia da cintura (cm)"
               placeholder="Ex: 80"
               type="number"
               value={formData.waistCircumference}
@@ -263,7 +263,7 @@ function App() {
             <div className="grid grid-cols-2 gap-4">
               <Input
                 name="lowerAbdomen"
-                label="Abdomen inferior (cm)"
+                label="Abd\u00f4men inferior (cm)"
                 placeholder="Opcional"
                 type="number"
                 value={formData.lowerAbdomen}
@@ -289,7 +289,7 @@ function App() {
           </Section>
 
           <Section
-            title="Fotos de Inicio"
+            title="Fotos de In\u00edcio"
             description="Recomendado, mas opcional. Use roupa similar, mesmo local e sem pose."
             icon={
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>
@@ -309,14 +309,14 @@ function App() {
             }
           >
             <RadioGroup
-              label="Voce treina atualmente?"
+              label="Voc\u00ea treina atualmente?"
               name="trainingStatus"
               value={formData.trainingStatus}
               onChange={handleChange}
               options={[
-                { label: 'Nao treino', value: 'nao_treino' },
-                { label: 'Treino as vezes', value: 'treino_as_vezes' },
-                { label: 'Treino com frequencia', value: 'treino_frequencia' }
+                { label: 'N\u00e3o treino', value: 'nao_treino' },
+                { label: 'Treino \u00e0s vezes', value: 'treino_as_vezes' },
+                { label: 'Treino com frequ\u00eancia', value: 'treino_frequencia' }
               ]}
             />
             <RadioGroup
@@ -345,25 +345,25 @@ function App() {
           </Section>
 
           <Section
-            title="Alimentacao Atual"
-            description="Aqui nao existe julgamento. E so pra voce ter clareza."
+            title="Alimenta\u00e7\u00e3o Atual"
+            description="Aqui n\u00e3o existe julgamento. \u00c9 s\u00f3 pra voc\u00ea ter clareza."
             icon={
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></svg>
             }
           >
             <RadioGroup
-              label="Como voce avalia sua alimentacao hoje?"
+              label="Como voc\u00ea avalia sua alimenta\u00e7\u00e3o hoje?"
               name="dietQuality"
               value={formData.dietQuality}
               onChange={handleChange}
               options={[
                 { label: 'Desorganizada', value: 'desorganizada' },
                 { label: 'Mais ou menos', value: 'mais_ou_menos' },
-                { label: 'Ja tento cuidar', value: 'ja_tento_cuidar' }
+                { label: 'J\u00e1 tento cuidar', value: 'ja_tento_cuidar' }
               ]}
             />
             <RadioGroup
-              label="Principal dificuldade com alimentacao"
+              label="Principal dificuldade com alimenta\u00e7\u00e3o"
               name="dietDifficulty"
               value={formData.dietDifficulty}
               onChange={handleChange}
@@ -378,7 +378,7 @@ function App() {
           </Section>
 
           <Section
-            title="Sono e Agua"
+            title="Sono e \u00c1gua"
             icon={
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
             }
@@ -395,7 +395,7 @@ function App() {
               ]}
             />
             <RadioGroup
-              label="Consumo diario de agua"
+              label="Consumo di\u00e1rio de \u00e1gua"
               name="waterIntake"
               value={formData.waterIntake}
               onChange={handleChange}
@@ -415,8 +415,8 @@ function App() {
           >
             <TextArea
               name="motivation"
-              label="Qual o principal motivo que te fez entrar no Desafio Tchau Panca?"
-              subLabel="Esse campo e importante para seu acompanhamento."
+              label="Qual o principal motivo que te fez entrar no Desafio Tchau Pan\u00e7a?"
+              subLabel="Esse campo \u00e9 importante para seu acompanhamento."
               value={formData.motivation}
               onChange={handleChange}
             />
@@ -436,7 +436,7 @@ function App() {
                 />
               </div>
               <span className="ml-3 text-brand-darkGrey leading-tight group-hover:text-brand-black transition-colors">
-                Me comprometo a seguir o plano do Desafio Tchau Panca pelos proximos 21 dias e fazer o meu melhor. <span className="text-brand-red">*</span>
+                Me comprometo a seguir o plano do Desafio Tchau Pan{"\u00e7"}a pelos pr{"\u00f3"}ximos 21 dias e fazer o meu melhor. <span className="text-brand-red">*</span>
               </span>
             </label>
           </div>
@@ -471,7 +471,7 @@ function App() {
       </main>
 
       <footer className="py-8 text-center text-gray-400 text-sm border-t border-brand-lightGrey">
-        <p>2025 Desafio Tchau Panca. Todos os direitos reservados.</p>
+        <p>{"\u00a9"} 2025 Desafio Tchau Pan{"\u00e7"}a. Todos os direitos reservados.</p>
       </footer>
     </div>
   );
