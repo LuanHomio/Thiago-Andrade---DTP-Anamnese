@@ -100,6 +100,17 @@ function App() {
       setNivel(data.nivel || "");
       setSubmitted(true);
       window.scrollTo(0, 0);
+
+      const w = window as any;
+      if (typeof w.gtag === "function") {
+        w.gtag("event", "anamnese_completed", {
+          nivel: data.nivel || "desconhecido",
+          sexo: formData.sex || "desconhecido",
+        });
+      }
+      if (typeof w.clarity === "function") {
+        w.clarity("event", "anamnese_completed");
+      }
     } catch (err: any) {
       console.error("Erro ao enviar:", err);
       setError(err.message || "Erro inesperado. Tente novamente.");
