@@ -111,6 +111,12 @@ function App() {
       if (typeof w.clarity === "function") {
         w.clarity("event", "anamnese_completed");
       }
+      if (typeof w.fbq === "function") {
+        w.fbq("track", "CompleteRegistration", {
+          content_name: "Anamnese Tchau Panca",
+          status: data.nivel || "desconhecido",
+        });
+      }
     } catch (err: any) {
       console.error("Erro ao enviar:", err);
       setError(err.message || "Erro inesperado. Tente novamente.");
